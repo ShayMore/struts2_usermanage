@@ -3,7 +3,9 @@ package com.momostruts2.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Map;
 
 /**
  * 数据库连接工具
@@ -29,6 +31,32 @@ public class DatabaseConn {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	/**
+	 * 删、改、增
+	 * @param sql
+	 * @param map
+	 * @return
+	 * @throws SQLException
+	 */
+	public int update(String sql,Map<String, String> map) throws SQLException{
+		statement = connection.createStatement();
+		statement.executeUpdate(sql);
+		return 0;		
+	}
+	
+	/**
+	 * 查询
+	 * @param sql
+	 * @param map
+	 * @return
+	 * @throws SQLException
+	 */
+	public ResultSet query(String sql,Map<String, String> map) throws SQLException{
+		statement = connection.createStatement();
+		rs = statement.executeQuery(sql);
+		return rs;		
 	}
 
 	public Connection getConn() {
