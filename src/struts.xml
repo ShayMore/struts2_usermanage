@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+
+	<package name="default" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="registerInterceptor"
+				class="com.momostruts2.interceptor.RegisterInterceptor" />
+			<interceptor name="loginInterceptor"
+				class="com.momostruts2.interceptor.LoginMethodInterceptor" />
+		</interceptors>
+
+		<action name="register" class="com.momostruts2.action.RegisterAction">
+			<result>/register_success.jsp</result>
+			<result name="login">/register.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="registerInterceptor" />
+		</action>
+
+		<action name="login" class="com.momostruts2.action.LoginAction">
+			<result>/login_success.jsp</result>
+			<result name="input">/login.jsp</result>
+<!-- 			<interceptor-ref name="defaultStack"></interceptor-ref> -->
+			<interceptor-ref name="loginInterceptor">
+				<param name="excludeMethods">execute</param>
+			</interceptor-ref>
+		</action>
+
+	</package>
+
+</struts>

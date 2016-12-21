@@ -7,14 +7,14 @@ package com.momostruts2.entity;
  */
 public class User {
 	
-	private int id;
-	private String username;
-	private String password;
-	private String email;
-	private String sex;
-	private String nickname;
-	private String phone;
-	private String regtime;
+	private int id;				//编号
+	private String username;	//用户名
+	private String password;	//密码
+	private String email;		//邮箱
+	private String sex;			//性别 0女/1男
+	private String nickname;	//昵称
+	private String phone;		//手机号
+	private String regtime;		//注册时间
 	
 	public int getId() {
 		return id;
