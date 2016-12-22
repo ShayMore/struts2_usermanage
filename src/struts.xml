@@ -29,9 +29,7 @@
 			<result name="input">/login.jsp</result>
 			<!-- 默认拦截器要加上 -->
 			<interceptor-ref name="defaultStack"></interceptor-ref>
-			<interceptor-ref name="loginInterceptor">
-				<param name="excludeMethods">execute</param>
-			</interceptor-ref>
+			<interceptor-ref name="loginInterceptor"/>
 		</action>
 
 	</package>

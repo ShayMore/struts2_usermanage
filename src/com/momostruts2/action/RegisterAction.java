@@ -13,15 +13,21 @@ import com.opensymphony.xwork2.ActionSupport;
 @SuppressWarnings("serial")
 public class RegisterAction extends ActionSupport {
 	
-	private User user;
+	private User reg;
 	private String password2;
 	private UserService userService = new UserServiceImpl();
 	
-	public User getUser() {
-		return user;
+	public User getReg() {
+		return reg;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setReg(User reg) {
+		this.reg = reg;
+	}
+	public UserService getUserService() {
+		return userService;
+	}
+	public void setUserService(UserService userService) {
+		this.userService = userService;
 	}
 	public String getPassword2() {
 		return password2;
@@ -31,7 +37,7 @@ public class RegisterAction extends ActionSupport {
 	}
 
 	public String execute() {
-		int i = userService.register(user);
+		int i = userService.register(reg);
 		if(i == 0) {
 			return INPUT;
 		}

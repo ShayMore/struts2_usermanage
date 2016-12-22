@@ -8,13 +8,12 @@
 <title>注册</title>
 </head>
 <body>
-<s:property value="exception.message"/>
 <s:form action="register.action" method="post">
 	<s:textfield name="reg.username" label="用户名" maxlength="16"/><br/>
 	<s:textfield name="reg.password" label="密码" minlength="6" maxlength="18"/><br/>
 	<s:textfield name="password2" label="确认密码" minlength="6" maxlength="18"/><br/>
 	<s:textfield name="reg.email" label="邮箱" maxlength="50"/><br/>
-	<s:select name="reg.sex" label="性别" key="男" value="1" list="#{'男':'1','女':'0','保密':'2'}" 
+	<s:select name="reg.sex" label="性别" key="1" value="男" list="#{'1':'男','0':'女','2':'保密'}" 
 					listKey="key" listValue="value"/><br/>
 	<s:textfield label="昵称" name="reg.nickname" maxlength="16"/><br/>
 	<s:textfield label="手机" name="reg.phone" maxlength="11"/><br/>

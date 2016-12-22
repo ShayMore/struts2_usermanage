@@ -12,7 +12,7 @@
 <s:form action="login.action" method="post">
 	<s:textfield name="username" label="用户名" maxlength="16"/><br/>
 	<s:textfield name="password" label="密码" minlength="6" maxlength="18"/>
-	<s:submit value="登录"/>
+	<s:submit value="登录"/>&nbsp;<s:a href="register.jsp">点击注册</s:a>
 </s:form>
 </body>
 </html>
