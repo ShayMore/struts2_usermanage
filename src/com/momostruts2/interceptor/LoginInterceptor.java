@@ -24,6 +24,8 @@ public class LoginInterceptor extends AbstractInterceptor {
 			LoginAction loginAction = (LoginAction)object;
 			String username = loginAction.getUsername();
 			String password = loginAction.getPassword();
+			System.out.println("LoginInterceptor : username " + username);
+			System.out.println("LoginInterceptor : password " + password);
 			if(StringTool.isEmpty(username)) {
 				System.out.println("用户名为空");
 				session.setAttribute("login", "用户名不能为空！");

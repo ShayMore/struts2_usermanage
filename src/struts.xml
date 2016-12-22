@@ -27,7 +27,8 @@
 		<action name="login" class="com.momostruts2.action.LoginAction">
 			<result>/login_success.jsp</result>
 			<result name="input">/login.jsp</result>
-<!-- 			<interceptor-ref name="defaultStack"></interceptor-ref> -->
+			<!-- 默认拦截器要加上 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>
 			<interceptor-ref name="loginInterceptor">
 				<param name="excludeMethods">execute</param>
 			</interceptor-ref>
