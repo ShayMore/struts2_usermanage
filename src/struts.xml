@@ -5,6 +5,7 @@
 <struts>
 
 	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.devMode" value="true"></constant>
 	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
 
 	<package name="default" extends="struts-default">
@@ -13,7 +14,7 @@
 			<interceptor name="registerInterceptor"
 				class="com.momostruts2.interceptor.RegisterInterceptor" />
 			<interceptor name="loginInterceptor"
-				class="com.momostruts2.interceptor.LoginMethodInterceptor" />
+				class="com.momostruts2.interceptor.LoginInterceptor" />
 		</interceptors>
 
 		<action name="register" class="com.momostruts2.action.RegisterAction">

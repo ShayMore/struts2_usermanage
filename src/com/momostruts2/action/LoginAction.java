@@ -31,6 +31,8 @@ public class LoginAction extends ActionSupport {
 	
 	public String execute() {
 		System.out.println("成功进入loginaction");
+		System.out.println("LoginAction : username " + username);
+		System.out.println("LoginAction : password " + password);
 		int i = userService.login(username, password);
 		if(i == 0) {
 			return INPUT;

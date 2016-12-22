@@ -145,7 +145,7 @@ public class UserDaoImpl implements UserDao {
 	public User getUser(String username) {
 		User user = null;
 		String sql = "SELECT id,username,password,email,nickname,phone,regtime,"
-				+ "CASE sex WHEN '0' THEN '女' WHEN '1' THEN '男' END AS sex FROM user WHERE id=?";
+				+ "CASE sex WHEN '0' THEN '女' WHEN '1' THEN '男' END AS sex FROM user WHERE username=?";
 		PreparedStatement psmt = null;
 		try {
 			psmt = dbc.getConn().prepareStatement(sql);
@@ -182,6 +182,7 @@ public class UserDaoImpl implements UserDao {
 			if(rs.next()) {
 				i = rs.getInt(1);
 			}
+			System.out.println("进入UserDao check i = " + i);
 			rs.close();
 			psmt.close();
 		} catch (Exception e) {

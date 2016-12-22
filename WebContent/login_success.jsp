@@ -8,11 +8,6 @@
 <title>登录</title>
 </head>
 <body>
-<s:property value="#session.login"/>
-<s:form action="login.action" method="post">
-	<s:textfield name="username" label="用户名" maxlength="16"/><br/>
-	<s:textfield name="password" label="密码" minlength="6" maxlength="18"/>
-	<s:submit value="登录"/>
-</s:form>
+Login Success!
 </body>
 </html>

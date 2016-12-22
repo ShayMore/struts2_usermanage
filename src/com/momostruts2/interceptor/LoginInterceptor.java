@@ -16,6 +16,7 @@ public class LoginInterceptor extends AbstractInterceptor {
 
 	@Override
 	public String intercept(ActionInvocation ai) throws Exception {
+		System.out.println("进入到登录拦截器 LoginInterceptor");
 		Object object = ai.getAction();
 		if(object != null) {
 			HttpServletRequest request = ServletActionContext.getRequest();

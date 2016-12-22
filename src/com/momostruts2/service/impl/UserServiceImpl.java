@@ -30,12 +30,14 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public int login(String username, String password) {
+		System.out.println("进入ServiceImpl");
 		int i = 0;
 		int count = userDao.check(username);
 		if(count > 0) {
 			User user = userDao.getUser(username);
 			if(user.getPassword().equals(password)) {
 				i = 1;
+				System.out.println("登录成功！");
 			}
 		} 
 		return i;
