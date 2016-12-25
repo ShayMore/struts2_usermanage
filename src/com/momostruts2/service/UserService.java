@@ -51,4 +51,10 @@ public interface UserService {
 	 */
 	public User getUser(int id);
 	
+	/**
+	 * 检测用户名是否存在
+	 * @return
+	 */
+	public int check(String username);
+	
 }

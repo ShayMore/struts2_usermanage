@@ -18,10 +18,10 @@
 		</interceptors>
 
 		<action name="register" class="com.momostruts2.action.RegisterAction">
-			<result>/register_success.jsp</result>
-			<result name="login">/register.jsp</result>
-			<interceptor-ref name="defaultStack"></interceptor-ref>
-			<interceptor-ref name="registerInterceptor" />
+			<result>/login.jsp</result>
+			<result name="input">/register.jsp</result>
+<!-- 			<interceptor-ref name="defaultStack"></interceptor-ref> -->
+<!-- 			<interceptor-ref name="registerInterceptor" /> -->
 		</action>
 
 		<action name="login" class="com.momostruts2.action.LoginAction">

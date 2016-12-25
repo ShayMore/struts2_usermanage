@@ -61,4 +61,10 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
+	@Override
+	public int check(String username) {
+		int i = userDao.check(username);
+		return i;
+	}
+
 }

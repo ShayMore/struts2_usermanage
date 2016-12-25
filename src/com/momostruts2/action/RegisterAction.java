@@ -3,6 +3,7 @@ package com.momostruts2.action;
 import com.momostruts2.entity.User;
 import com.momostruts2.service.UserService;
 import com.momostruts2.service.impl.UserServiceImpl;
+import com.momostruts2.util.StringTool;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -42,5 +43,23 @@ public class RegisterAction extends ActionSupport {
 			return INPUT;
 		}
 		return SUCCESS;
+	}
+	
+	public void validate() {
+		System.out.println("我进入到了validate方法");
+		if(StringTool.isNotEmpty(reg.getUsername())) {
+			if(StringTool.isNotEmpty(password2)) {
+				int i = userService.check(reg.getUsername());
+				if(i > 0) {
+					addActionError("用戶名已经存在！");
+				} else if(!reg.getPassword().equals(password2)) {
+					addActionError("两次输入密码不一致！");
+				}
+			} else {
+				addActionError("密码不能为空！");
+			}
+		} else {
+			addActionError("用户名不能为空！");
+		}
 	}
 }

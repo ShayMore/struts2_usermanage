@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+		 "-//Apache Struts//XWork Validator 1.0.2//EN" 
+		 "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+
+	<field name="reg.username">
+		<field-validator type="required">
+			<message>用户名不能为null！</message>
+		</field-validator>
+		<field-validator type="requiredstring">
+			<message>用户名不能为空！</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="regex">![CDATA[\w({6,16})]]</param>
+			<message>用户名请用6到16英文或数字组成！</message>
+		</field-validator>
+	</field>
+
+	<field name="reg.password">
+		<field-validator type="required">
+			<message>密码不能为null！</message>
+		</field-validator>
+		<field-validator type="requiredstring">
+			<message>密码不能为空！</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression">![CDATA[\w({6,16})]]</param>
+			<message>密码请用6到16英文或数字组成！</message>
+		</field-validator>
+	</field>
+
+	<field name="reg.email">
+		<field-validator type="required">
+			<message>邮箱不能为null！</message>
+		</field-validator>
+		<field-validator type="requiredstring">
+			<message>邮箱不能为空！</message>
+		</field-validator>
+		<field-validator type="type">
+			<message>邮箱格式错误！</message>
+		</field-validator>
+	</field>
+
+</validators>

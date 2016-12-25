@@ -18,6 +18,8 @@
 	<s:textfield label="昵称" name="reg.nickname" maxlength="16"/><br/>
 	<s:textfield label="手机" name="reg.phone" maxlength="11"/><br/>
 	<s:submit value="注册"/>
+	<s:actionerror/>
+	<s:fielderror/>
 </s:form>
 </body>
 </html>
