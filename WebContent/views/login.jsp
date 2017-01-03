@@ -1,8 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=gbk" pageEncoding="gbk"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
-	// ç»å¯¹è·¯å¾„ä½¿ç”¨æ–¹æ³•
+	// ¾ø¶ÔÂ·¾¶Ê¹ÓÃ·½·¨
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 	System.out.println("path:"+path);
@@ -11,19 +10,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!-- ç»å¯¹è·¯å¾„ä½¿ç”¨æ–¹æ³• -->
+<!-- ¾ø¶ÔÂ·¾¶Ê¹ÓÃ·½·¨ -->
 <base href="<%=basePath%>"/>
-<!-- ç”¨è‡ªå·±å†™çš„é“¾æŽ¥ -->
+<!-- ÓÃ×Ô¼ºÐ´µÄÁ´½Ó -->
 <!-- <base href="http://localhost:8080/struts2_usermanage/"/> -->
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>ç™»å½•</title>
+<title>µÇÂ¼</title>
 </head>
 <body>
 <s:property value="#session.login"/>
 <s:form action="login.action" method="post">
-	<s:textfield name="username" label="ç”¨æˆ·å" maxlength="16"/><br/>
-	<s:textfield name="password" label="å¯†ç " minlength="6" maxlength="18"/>
-	<s:submit value="ç™»å½•"/>&nbsp;<a href="register.jsp">ç‚¹å‡»æ³¨å†Œ</a>
+	<s:textfield name="username" label="ÓÃ»§Ãû" maxlength="16"/><br/>
+	<s:textfield name="password" label="ÃÜÂë" minlength="6" maxlength="18"/>
+	<s:submit value="µÇÂ¼"/>&nbsp;<a href="register.jsp">µã»÷×¢²á</a>
 </s:form>
+<s:debug></s:debug>
 </body>
 </html>

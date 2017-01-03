@@ -12,10 +12,12 @@ import com.opensymphony.xwork2.ModelDriven;
  *
  */
 @SuppressWarnings("serial")
-public class LoginAction extends ActionSupport implements ModelDriven<User>{
+public class LoginAction extends ActionSupport 
+//implements ModelDriven<User>
+{
 	
-	// ModelDriven 方式，必须 new，struts不自动创建； URL中用普通属性传值方式传递参数值
-	private User user  = new User();
+//	// ModelDriven 方式，必须 new，struts不自动创建； URL中用普通属性传值方式传递参数值
+//	private User user  = new User();
 	
 	private String username;
 	private String password;
@@ -45,9 +47,9 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>{
 		return SUCCESS;
 	}
 	
-	@Override
-	public User getModel() {
-		return user;
-	}
+//	@Override
+//	public User getModel() {
+//		return user;
+//	}
 
 }

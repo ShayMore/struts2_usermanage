@@ -20,6 +20,17 @@
 	<s:submit value="注册"/>
 	<s:actionerror/>
 	<s:fielderror/>
+<!-- 	<div style="color:red;font-weight:bold;font-size:20px;"> -->
+<%-- 		<s:property value="fieldErrors"/> --%>
+<!-- 	</div> -->
+<!-- 	<div style="color:green;font-weight:bold;font-size:20px;"> -->
+<%-- 		<s:property value="errors.err[1]"/> --%>
+<!-- 	</div> -->
+<!-- 	<div style="color:blue;font-weight:bold;font-size:20px;"> -->
+<%-- 		<s:property value="errors.err[2]"/> --%>
+<!-- 	</div> -->
+	
 </s:form>
+<s:debug></s:debug>
 </body>
 </html>

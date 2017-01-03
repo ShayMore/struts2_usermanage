@@ -8,6 +8,11 @@
 <title>登录</title>
 </head>
 <body>
-Login Success!
+Login Success!<br/>
+username:
+<s:property value="username"/><br/>
+password:
+<s:property value="password"/>
+<s:debug></s:debug>
 </body>
 </html>

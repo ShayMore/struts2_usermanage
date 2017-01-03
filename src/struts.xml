@@ -4,7 +4,7 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 
-	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
 	<constant name="struts.devMode" value="true"></constant>
 	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
 
@@ -19,6 +19,7 @@
 
 		<action name="register" class="com.momostruts2.action.RegisterAction">
 			<result>/login.jsp</result>
+			<result name="error">/register.jsp</result>
 			<result name="input">/register.jsp</result>
 <!-- 			<interceptor-ref name="defaultStack"></interceptor-ref> -->
 <!-- 			<interceptor-ref name="registerInterceptor" /> -->
