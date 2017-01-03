@@ -1,8 +1,10 @@
 package com.momostruts2.action;
 
+import com.momostruts2.entity.User;
 import com.momostruts2.service.impl.UserServiceImpl;
 import com.momostruts2.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 
 /**
  * 登录C层
@@ -10,7 +12,10 @@ import com.opensymphony.xwork2.ActionSupport;
  *
  */
 @SuppressWarnings("serial")
-public class LoginAction extends ActionSupport {
+public class LoginAction extends ActionSupport implements ModelDriven<User>{
+	
+	// ModelDriven 方式，必须 new，struts不自动创建； URL中用普通属性传值方式传递参数值
+	private User user  = new User();
 	
 	private String username;
 	private String password;
@@ -38,6 +43,11 @@ public class LoginAction extends ActionSupport {
 			return INPUT;
 		}
 		return SUCCESS;
+	}
+	
+	@Override
+	public User getModel() {
+		return user;
 	}
 
 }

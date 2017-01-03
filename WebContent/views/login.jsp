@@ -13,6 +13,8 @@
 <head>
 <!-- 绝对路径使用方法 -->
 <base href="<%=basePath%>"/>
+<!-- 用自己写的链接 -->
+<!-- <base href="http://localhost:8080/struts2_usermanage/"/> -->
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>登录</title>
 </head>
